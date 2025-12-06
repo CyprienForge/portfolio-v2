@@ -4,7 +4,6 @@ namespace App\Message;
 
 use Symfony\Component\Messenger\Attribute\AsMessage;
 
-#[AsMessage('async')]
 final class ContactMessage
 {
     public function __construct(
