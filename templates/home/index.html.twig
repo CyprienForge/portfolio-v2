@@ -1,5 +1,22 @@
 {% extends 'base.html.twig' %}
 {% block body %}
+    {% for message in app.flashes('success') %}
+        <div class="fixed bottom-6 right-6 z-50 animate-slide-up">
+            <div class="bg-green-600 text-white px-6 py-4 rounded-lg shadow-2xl flex items-center gap-3 min-w-[300px] max-w-md">
+                <div class="flex-shrink-0">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <p class="flex-1 font-medium">{{ message }}</p>
+                <button onclick="this.parentElement.parentElement.remove()" class="flex-shrink-0 hover:bg-green-700 rounded p-1 transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    {% endfor %}
     <!-- Navigation -->
     <nav class="navbar fixed top-0 left-0 w-full z-50 py-4 px-6">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
@@ -559,6 +576,11 @@
                     </div>
 
                     <div class="mb-6">
+                        <label for="message" class="block text-gray-700 font-medium mb-2">Numéro de téléphone</label>
+                        {{ form_widget(contactForm.phone, {'attr': {'id': 'message', 'rows': 5, 'class': 'w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent'}}) }}
+                    </div>
+
+                    <div class="mb-6">
                         <label for="subject" class="block text-gray-700 font-medium mb-2">Sujet</label>
                         {{ form_widget(contactForm.subject, {'attr': {'id': 'subject', 'class': 'w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent'}}) }}
                     </div>
@@ -607,6 +629,4 @@
             </div>
         </div>
     </footer>
-
-    <script src="{{ asset('script.js') }}"></script>
 {% endblock %}

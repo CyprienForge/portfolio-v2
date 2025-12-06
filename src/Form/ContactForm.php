@@ -4,6 +4,7 @@ namespace App\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -29,6 +30,14 @@ class ContactForm extends AbstractType
                     'id' => 'email',
                     'class' => 'w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent',
                     'placeholder' => 'Adresse email',
+                ]
+            ])
+            ->add('phone', TelType::class, [
+                'label' => false,
+                'attr' => [
+                    'id' => 'phone',
+                    'class' => 'w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent',
+                    'placeholder' => 'Numéro de téléphone',
                 ]
             ])
             ->add('subject', TextType::class, [
