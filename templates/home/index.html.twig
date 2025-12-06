@@ -1,0 +1,612 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <!-- Navigation -->
+    <nav class="navbar fixed top-0 left-0 w-full z-50 py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-green-600">Cyprien FORGE</a>
+
+            <!-- Menu desktop -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#presentation" class="text-gray-700 hover:text-green-600 transition-colors">Présentation</a>
+                <a href="#competences" class="text-gray-700 hover:text-green-600 transition-colors">Compétences</a>
+                <a href="#cursus" class="text-gray-700 hover:text-green-600 transition-colors">Cursus</a>
+                <a href="#projets" class="text-gray-700 hover:text-green-600 transition-colors">Projets</a>
+                <a href="#contact" class="bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700 transition-colors">Contact</a>
+            </div>
+
+            <!-- Menu mobile -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Menu mobile ouvert -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white absolute top-full left-0 w-full shadow-lg py-4">
+            <div class="flex flex-col space-y-4 px-6">
+                <a href="#presentation" class="text-gray-700 hover:text-green-600 transition-colors py-2">Présentation</a>
+                <a href="#competences" class="text-gray-700 hover:text-green-600 transition-colors py-2">Compétences</a>
+                <a href="#cursus" class="text-gray-700 hover:text-green-600 transition-colors py-2">Cursus</a>
+                <a href="#projets" class="text-gray-700 hover:text-green-600 transition-colors py-2">Projets</a>
+                <a href="#contact" class="bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700 transition-colors text-center">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Présentation (Hero) -->
+    <section id="presentation" class="pt-32 md:pt-64 pb-16 px-6 hero-gradient">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+                <div class="lg:w-1/2 fade-in">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4"><span class="text-green-600">Cyprien Forge</span></h1>
+                    <h2 class="text-2xl md:text-3xl text-gray-700 mb-6">Développeur Web Full-Stack</h2>
+                    <p class="text-lg text-gray-600 mb-8">Je mets sur pied des applications web modernes, performantes et accessibles. Passionné par les technologies front-end et back-end, j'aime transformer des idées en solutions numériques élégantes.</p>
+                    <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                        <a href="#projets" class="bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transition-colors font-medium">Voir mes projets</a>
+                        <a href="#contact" class="border-2 border-green-600 text-green-600 px-6 py-3 rounded-full hover:bg-green-50 transition-colors font-medium">Me contacter</a>
+                    </div>
+                </div>
+
+                <div class="mb-16 lg:w-1/2 flex justify-center fade-in">
+                    <div class="relative w-72 h-72 md:w-96 md:h-96">
+                        <div class="absolute inset-0 bg-gradient-to-r from-green-400 to-green-600 rounded-full opacity-20 blur-xl floating"></div>
+                        <div class="absolute inset-8 bg-gradient-to-br from-green-100 to-green-300 rounded-full flex items-center justify-center">
+                            <div class="text-center">
+                                <img class="rounded-full fas fa-code text-6xl md:text-8xl text-green-700 mb-4" src="{{ asset('images/myPhoto.jpg') }}" alt="Image of myself">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="mt-4 md:mt-64 fade-in">
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover flex flex-col items-center text-center border-l-4 border-green-500">
+                        <i class="fas fa-graduation-cap text-4xl text-green-600 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Cursus & Expérience</h3>
+                        <p class="text-gray-600 mb-4">
+                            Formation académique solide combinée à une expérience professionnelle concrète.
+                            Maîtrise des dernières technologies et méthodologies de développement.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-lg card-hover flex flex-col items-center text-center border-l-4 border-green-500">
+                        <i class="fas fa-map-marker-alt text-4xl text-green-600 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Disponibilité Régionale</h3>
+                        <p class="text-gray-600 mb-4">
+                            Disponible pour vos projets dans le Puy-de-Dôme (63) et la Loire (42),
+                            notamment à Roanne, Feurs et Montbrison.
+                        </p>
+                        <div class="flex flex-col md:flex-row gap-6 w-full mt-4 justify-center">
+                            <div class="flex items-center">
+                                <div class="bg-green-100 p-3 rounded-full mr-3">
+                                    <span class="font-bold text-green-700 text-lg">63</span>
+                                </div>
+                                <div class="text-left">
+                                    <p class="font-medium text-gray-800">Puy-de-Dôme</p>
+                                    <p class="text-gray-600 text-sm">Clermont-Ferrand et environs</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-green-100 p-3 rounded-full mr-3">
+                                    <span class="font-bold text-green-700 text-lg">42</span>
+                                </div>
+                                <div class="text-left">
+                                    <p class="font-medium text-gray-800">Loire</p>
+                                    <p class="text-gray-600 text-sm">Roanne, Feurs, Montbrison</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="competences" class="py-16 px-6 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 section-title fade-in">Mes Compétences</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-10">
+                <!-- Compétences Frontend -->
+                <div class="fade-in">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-paint-brush text-green-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Frontend</h3>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-800">HTML / CSS</span>
+                                <span class="font-medium text-green-600">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-800">TailwindCSS</span>
+                                <span class="font-medium text-green-600">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-800">Angular</span>
+                                <span class="font-medium text-green-600">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-800">Vue.js</span>
+                                <span class="font-medium text-green-600">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compétences Backend -->
+                <div class="fade-in">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-server text-green-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Backend</h3>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-800">PHP / Symfony</span>
+                                <span class="font-medium text-green-600">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-800">Base de données (PostgreSQL, MySQL, MongoDB)</span>
+                                <span class="font-medium text-green-600">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-800">Docker</span>
+                                <span class="font-medium text-green-600">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-800">Ruby on Rails</span>
+                                <span class="font-medium text-green-600">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Autres compétences -->
+            <div class="mt-16 fade-in">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Autres Compétences & Outils</h3>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                    <div class="bg-white p-5 rounded-xl shadow-md flex flex-col items-center justify-center card-hover">
+                        <i class="fab fa-git-alt text-3xl text-gray-800 mb-3"></i>
+                        <span class="font-medium text-gray-800">Git</span>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-xl shadow-md flex flex-col items-center justify-center card-hover">
+                        <i class="fa-solid fa-diagram-successor text-3xl mb-3"></i>
+                        <span class="font-medium text-gray-800">UML</span>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-xl shadow-md flex flex-col items-center justify-center card-hover">
+                        <i class="fas fa-mobile-alt text-3xl text-gray-800 mb-3"></i>
+                        <span class="font-medium text-gray-800">Responsive</span>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-xl shadow-md flex flex-col items-center justify-center card-hover">
+                        <i class="fab fa-figma text-3xl text-purple-600 mb-3"></i>
+                        <span class="font-medium text-gray-800">Figma</span>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-xl shadow-md flex flex-col items-center justify-center card-hover">
+                        <i class="fas fa-chart-line text-3xl text-green-600 mb-3"></i>
+                        <span class="font-medium text-gray-800">SEO</span>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-xl shadow-md flex flex-col items-center justify-center card-hover">
+                        <i class="fas fa-bolt text-3xl text-yellow-500 mb-3"></i>
+                        <span class="font-medium text-gray-800">Performance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Cursus -->
+    <section id="cursus" class="py-16 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 section-title fade-in">Mon Parcours</h2>
+
+            <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Expériences professionnelles -->
+                <div class="fade-in">
+                    <div class="flex items-center mb-8">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-briefcase text-green-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Expériences Professionnelles</h3>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-bold text-gray-900">CDD Développeur Web</h4>
+                            <p class="text-green-600 font-medium mb-2">Skara Informatique (42) • Juillet 2025 - Août 2025</p>
+                            <p class="text-gray-600">
+                                Cette première expérience m’a permis de m’intégrer dans une équipe informatique et de beaucoup progresser sur l’aspect collaboratif du métier. Les technologies utilisées étaient PHP et MySQL.
+                                Mes missions ont été variées mais l'objectif principal de ces 6 mois était de rendre le logiciel conforme à la norme NF525
+                            </p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-bold text-gray-900">Stagiaire Développeur Web</h4>
+                            <p class="text-green-600 font-medium mb-2">Skara Informatique (42) • Avril 2025 - Juin 2025</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formation -->
+                <div class="fade-in">
+                    <div class="flex items-center mb-8">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-graduation-cap text-green-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Formations</h3>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-bold text-gray-900">BUT Informatique</h4>
+                            <p class="text-green-600 font-medium mb-2">IUT Aubière (63) • 2023 - 2026</p>
+                            <p class="text-gray-600">
+                                Formation générale en informatique dans laquelle j'ai pu acquérir de solides bases dans tous les domaines du vaste monde qu'est le développement informatique.
+                                Je me suis ensuite spécialisé dans le web au cours de ma deuxième année, ce qui m'a permis d'approfondir Ruby on Rails, Symfony ou encore Angular.
+                            </p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-bold text-gray-900">Baccalauréat Général</h4>
+                            <p class="text-green-600 font-medium mb-2">Lycée Saint-Paul Forez (42) • 2020 - 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="py-16 px-6 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 section-title fade-in">Mes Projets</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mb-12 fade-in">Une sélection de projets récents qui illustrent mes compétences et mon approche du développement web.</p>
+
+            <!-- Conteneur des projets -->
+            <div class="relative fade-in">
+                <!-- Pour mobile : affichage en colonne -->
+                <div class="md:hidden space-y-8">
+                    <!-- Projet 1 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden project-card card-hover">
+                        <div class="h-56 bg-gradient-to-r from-green-400 to-green-600 relative">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="fa-solid fa-leaf text-white text-6xl"></i>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">EcoTrack</h3>
+                            <p class="text-gray-600 mb-4">Plateforme web pour calculer précisement votre empreinte carbone en quelques minutes. Projet académique en groupe de 5</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Symfony</span>
+                                <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Angular</span>
+                                <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Kubernetes</span>
+                                <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Architecture MVC</span>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <h3 class="text-2xl font-bold text-white mb-4">EcoTrack</h3>
+                            <p class="text-white text-center mb-6">Plateforme web pour calculer précisement votre empreinte carbone en quelques minutes. Projet académique en groupe de 5</p>
+                            <!-- <a href="#" class="bg-white text-green-600 px-5 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors">Voir le projet</a> -->
+                        </div>
+                    </div>
+
+                    <!-- Projet 2 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden project-card card-hover">
+                        <div class="h-56 bg-gradient-to-r from-blue-400 to-blue-600 relative">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="fas fa-tasks text-white text-6xl"></i>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Gestion de locations courte durée</h3>
+                            <p class="text-gray-600 mb-4">Plateforme web / mobile pour gérer ses locations en centralisant les calendriers de AirBNB, LeBonCoin ou Booking. Projet académique en groupe de 5</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">PHP</span>
+                                <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Android</span>
+                                <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">SpringBoot</span>
+                                <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Architecture MVC</span>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <h3 class="text-2xl font-bold text-white mb-4">Gestion de locations courte durée</h3>
+                            <p class="text-white text-center mb-6">Plateforme web / mobile pour gérer ses locations en centralisant les calendriers de AirBNB, LeBonCoin ou Booking. Projet académique en groupe de 5</p>
+                            <!-- <a href="#" class="bg-white text-green-600 px-5 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors">Voir le projet</a> -->
+                        </div>
+                    </div>
+
+                    <!-- Projet 3 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden project-card card-hover">
+                        <div class="h-56 bg-gradient-to-r from-purple-400 to-purple-600 relative">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="fa-solid fa-binoculars text-white text-6xl"></i>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">ScoutAdjoint</h3>
+                            <p class="text-gray-600 mb-4">Projet personnel de développement d'une plateforme aidant au travail des scouts amateurs au bord des terrains de football dans le but de dénicher des pépites</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Symfony</span>
+                                <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Angular</span>
+                                <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Flutter</span>
+                                <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Hexagonal Architecture</span>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <h3 class="text-2xl font-bold text-white mb-4">ScoutAdjoint</h3>
+                            <p class="text-white text-center mb-6">Projet personnel de développement d'une plateforme aidant au travail des scouts amateurs au bord des terrains de football dans le but de dénicher des pépites</p>
+                            <a target="_blank" href="https://github.com/CyprienForge/ScoutAdjoint_WebApp" class="bg-white text-green-600 px-5 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors">Voir le code source</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pour tablette et desktop : carrousel -->
+                <div class="hidden md:block">
+                    <div class="overflow-hidden">
+                        <div id="projects-carousel" class="flex transition-transform duration-500 ease-in-out">
+                            <!-- Projet 1 -->
+                            <div class="min-w-[50%] lg:min-w-[33.333%] p-4">
+                                <div class="bg-white rounded-2xl shadow-lg overflow-hidden project-card card-hover">
+                                    <div class="h-56 bg-gradient-to-r from-green-400 to-green-600 relative">
+                                        <div class="absolute inset-0 flex items-center justify-center">
+                                            <i class="fa-solid fa-leaf text-white text-6xl"></i>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-bold text-gray-900 mb-2">EcoTrack</h3>
+                                        <p class="text-gray-600 mb-4">Plateforme web pour calculer précisement votre empreinte carbone en quelques minutes. Projet académique en groupe de 5</p>
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Symfony</span>
+                                            <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Angular</span>
+                                            <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Kubernetes</span>
+                                            <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Architecture MVC</span>
+                                        </div>
+                                    </div>
+                                    <div class="project-overlay">
+                                        <h3 class="text-2xl font-bold text-white mb-4">EcoTrack</h3>
+                                        <p class="text-white text-center mb-6">Plateforme web pour calculer précisement votre empreinte carbone en quelques minutes. Projet académique en groupe de 5</p>
+                                        <!-- <a href="#" class="bg-white text-green-600 px-5 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors">Voir le projet</a> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Projet 2 -->
+                            <div class="min-w-[50%] lg:min-w-[33.333%] p-4">
+                                <div class="bg-white rounded-2xl shadow-lg overflow-hidden project-card card-hover">
+                                    <div class="h-56 bg-gradient-to-r from-blue-400 to-blue-600 relative">
+                                        <div class="absolute inset-0 flex items-center justify-center">
+                                            <i class="fas fa-tasks text-white text-6xl"></i>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-bold text-gray-900 mb-2">Gestion de locations courte durée</h3>
+                                        <p class="text-gray-600 mb-4">Plateforme web / mobile pour gérer ses locations en centralisant les calendriers de AirBNB, LeBonCoin ou Booking. Projet académique en groupe de 5</p>
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">PHP</span>
+                                            <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Android</span>
+                                            <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">SpringBoot</span>
+                                            <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Architecture MVC</span>
+                                        </div>
+                                    </div>
+                                    <div class="project-overlay">
+                                        <h3 class="text-2xl font-bold text-white mb-4">Gestion de locations courte durée</h3>
+                                        <p class="text-white text-center mb-6">Plateforme web / mobile pour gérer ses locations en centralisant les calendriers de AirBNB, LeBonCoin ou Booking. Projet académique en groupe de 5</p>
+                                        <!-- <a href="#" class="bg-white text-green-600 px-5 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors">Voir le projet</a> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Projet 3 -->
+                            <div class="min-w-[50%] lg:min-w-[33.333%] p-4">
+                                <div class="bg-white rounded-2xl shadow-lg overflow-hidden project-card card-hover">
+                                    <div class="h-56 bg-gradient-to-r from-purple-400 to-purple-600 relative">
+                                        <div class="absolute inset-0 flex items-center justify-center">
+                                            <i class="fa-solid fa-binoculars text-white text-6xl"></i>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-bold text-gray-900 mb-2">ScoutAdjoint</h3>
+                                        <p class="text-gray-600 mb-4">Projet personnel de développement d'une plateforme aidant au travail des scouts amateurs au bord des terrains de football dans le but de dénicher des pépites</p>
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Symfony</span>
+                                            <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Angular</span>
+                                            <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Flutter</span>
+                                            <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Hexagonal Architecture</span>
+                                        </div>
+                                    </div>
+                                    <div class="project-overlay">
+                                        <h3 class="text-2xl font-bold text-white mb-4">ScoutAdjoint</h3>
+                                        <p class="text-white text-center mb-6">Projet personnel de développement d'une plateforme aidant au travail des scouts amateurs au bord des terrains de football dans le but de dénicher des pépites</p>
+                                        <a target="_blank" href="https://github.com/CyprienForge/ScoutAdjoint_WebApp" class="bg-white text-green-600 px-5 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors">Voir le code source</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="py-16 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 section-title fade-in">Contactez-moi</h2>
+
+            <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Informations de contact -->
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8">Travaillons ensemble</h3>
+                    <p class="text-gray-600 mb-8">Vous avez un projet en tête ? N'hésitez pas à me contacter pour discuter de vos besoins et voir comment je peux vous aider à les concrétiser.</p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Email</h4>
+                                <p class="text-gray-600">cyprien.forge.pro@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Téléphone</h4>
+                                <p class="text-gray-600">+33 7 66 07 98 34</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Localisation</h4>
+                                <p class="text-gray-600">Loire (42) - Puy-de-Dôme (63), France</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-10">
+                        <h4 class="font-bold text-gray-900 mb-4">Suivez-moi</h4>
+                        <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                            <a target="_blank" href="https://github.com/CyprienForge" class="bg-gray-100 text-gray-800 p-3 rounded-full hover:bg-green-100 hover:text-green-600 transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a target="_blank" href="https://www.linkedin.com/in/cyprien-forge" class="bg-gray-100 text-gray-800 p-3 rounded-full hover:bg-green-100 hover:text-green-600 transition-colors">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulaire de contact -->
+                <div class="fade-in">
+                    {{ form_start(contactForm, {
+                        'attr': {
+                            'id': 'contact-form',
+                            'class': 'bg-gray-50 p-8 rounded-2xl shadow-lg'
+                        },
+                        'method': 'POST'
+                    }) }}
+                    <div class="mb-6">
+                        <label for="name" class="block text-gray-700 font-medium mb-2">Nom complet</label>
+                        {{ form_widget(contactForm.name, {'attr': {'id': 'name', 'class': 'w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent'}}) }}
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="email" class="block text-gray-700 font-medium mb-2">Adresse email</label>
+                        {{ form_widget(contactForm.email, {'attr': {'id': 'email', 'class': 'w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent'}}) }}
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="subject" class="block text-gray-700 font-medium mb-2">Sujet</label>
+                        {{ form_widget(contactForm.subject, {'attr': {'id': 'subject', 'class': 'w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent'}}) }}
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                        {{ form_widget(contactForm.message, {'attr': {'id': 'message', 'rows': 5, 'class': 'w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent'}}) }}
+                    </div>
+
+                    {{ form_widget(contactForm.submit) }}
+
+                    {{ form_end(contactForm) }}
+
+
+                    {% for message in app.flashes('success') %}
+                        <p class="mt-4 text-center text-green-600">{{ message }}</p>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold text-green-400">Cyprien FORGE</a>
+                    <p class="text-gray-400 mt-2">Développeur Web Full-Stack • Loire (42) - Puy-de-Dôme (63), France</p>
+                </div>
+
+                <div class="flex space-x-6">
+                    <a target="_blank" href="https://github.com/CyprienForge" class="bg-gray-100 text-gray-800 p-3 rounded-full hover:bg-green-100 hover:text-green-600 transition-colors">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com/in/cyprien-forge" class="bg-gray-100 text-gray-800 p-3 rounded-full hover:bg-green-100 hover:text-green-600 transition-colors">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Cyprien FORGE. Tous droits réservés.</p>
+                <p class="mt-2">Développeur Web Full-Stack.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ asset('script.js') }}"></script>
+{% endblock %}
