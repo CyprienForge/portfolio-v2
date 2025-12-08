@@ -83,7 +83,7 @@ body {
     padding: 1.5rem;
 }
 
-.project-card:hover .project-overlay {
+.project-card:hover .project-overlay .project-overlay-blue {
     opacity: 1;
 }
 
