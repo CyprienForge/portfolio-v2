@@ -11,7 +11,7 @@
         <meta charset="UTF-8">
         <title>{% block title %}Cyprien Forge - Développeur web Loire (42), Roanne, Feurs, Montbrison - Puy-de-Dôme (63){% endblock %}</title>
         <script src="https://cdn.tailwindcss.com"></script>
-        <meta name="description" content="{% block description %}Cyprien Forge - Développeur Web Full-Stack spécialisé Symfony, Angular, PHP. Disponible Loire (42) et Puy-de-Dôme (63) : Roanne, Feurs, Montbrison, Clermont-Ferrand. Créez votre site web professionnel.{% endblock %}">
+        <meta name="description" content="Cyprien Forge - Développeur Web Full-Stack spécialisé Symfony, Angular, PHP. Disponible Loire (42) et Puy-de-Dôme (63) : Roanne, Feurs, Montbrison, Clermont-Ferrand. Créez votre site web professionnel.">
         <meta name="keywords" content="développeur web, site professionnel, Loire, Loire (42), roanne, montbrison, feurs, freelance, puy-de-dôme, 63, Symfony, site professionnel, création de site web, cyprien forge, Cyprien Forge">
         <meta name="author" content="Cyprien Forge">
         <meta http-equiv="content-language" content="fr">
@@ -21,6 +21,19 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link rel="icon" type="image/svg+xml" href="{{ asset('logo.svg') }}">
 	    <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
+	    <link rel="canonical" href="https://cyprien-forge.fr/">
+
+        <!-- OpenGraph -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Développeur Web à Roanne, Feurs, Montbrison – Cyprien Forge">
+        <meta property="og:description" content="Cyprien Forge - Développeur Web Full-Stack spécialisé Symfony, Angular, PHP. Disponible Loire (42) et Puy-de-Dôme (63) : Roanne, Feurs, Montbrison, Clermont-Ferrand. Créez votre site web professionnel.">
+        <meta property="og:url" content="https://cyprien-forge.fr/">
+        <meta property="og:locale" content="fr_FR">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:title" content="Développeur Web à Roanne, Feurs, Montbrison – Cyprien Forge">
+        <meta property="twitter:description" content="Cyprien Forge - Développeur Web Full-Stack spécialisé Symfony, Angular, PHP. Disponible Loire (42) et Puy-de-Dôme (63) : Roanne, Feurs, Montbrison, Clermont-Ferrand. Créez votre site web professionnel.">
         {% block stylesheets %}
         {% endblock %}
 
@@ -37,11 +50,11 @@
         <script type="application/ld+json">
             {
               "@context": "https://schema.org",
-              "@type": "Person",
-              "name": "Cyprien Forge",
+              "@type": "LocalBusiness",
+              "name": "Cyprien Forge - Développeur Web Full-Stack",
               "jobTitle": "Développeur Web Full-Stack",
               "url": "https://cyprien-forge.fr",
-              "image": "{{ absolute_url(asset('images/myPhoto.jpg')) }}",
+              "image": "https://hugo-spery.fr/images/myPhoto.jpg",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Roanne, Feurs, Montbrison",
@@ -50,8 +63,8 @@
               },
               "email": "cyprien.forge.pro@gmail.com",
               "telephone": "+33766079834",
-              "knowsAbout": ["Site web", "Application Web", "création site web", "Roanne", "Montbrison", "Feurs", "Symfony", "Angular", "PHP", "JavaScript", "Développement Web"],
-              "description": "Développeur Web Full-Stack spécialisé Symfony, Angular, PHP. Je crée des applications ou sites web modernes et intuitifs. Disponible Loire (42) et Puy-de-Dôme (63) : Roanne, Feurs, Montbrison, Clermont-Ferrand. Créez votre site web professionnel."
+              "knowsAbout": ["Cyprien Forge", "Site web", "Application Web", "création site web", "Roanne", "Montbrison", "Feurs", "Symfony", "Angular", "PHP", "JavaScript", "Développement Web"],
+              "description": "Cyprien Forge - Développeur Web Full-Stack spécialisé Symfony, Angular, PHP. Je crée des applications ou sites web modernes et intuitifs. Disponible Loire (42) et Puy-de-Dôme (63) : Roanne, Feurs, Montbrison, Clermont-Ferrand. Créez votre site web professionnel."
             }
         </script>
 
