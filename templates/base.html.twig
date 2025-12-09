@@ -8,59 +8,41 @@
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-MKPZ5C8D');</script>
         <!-- End Google Tag Manager -->
+
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <title>{% block title %}Cyprien Forge - Développeur web Loire (42), Roanne, Feurs, Montbrison - Puy-de-Dôme (63){% endblock %}</title>
-        <script src="https://cdn.tailwindcss.com"></script>
+
         <meta name="description" content="Cyprien Forge - Développeur Web Full-Stack spécialisé Symfony, Angular, PHP. Disponible Loire (42) et Puy-de-Dôme (63) : Roanne, Feurs, Montbrison, Clermont-Ferrand. Créez votre site web professionnel.">
-        <meta name="keywords" content="développeur web, site professionnel, Loire, Loire (42), roanne, montbrison, feurs, freelance, puy-de-dôme, 63, Symfony, site professionnel, création de site web, cyprien forge, Cyprien Forge">
+        <meta name="keywords" content="développeur web, site professionnel, Loire, Loire (42), roanne, montbrison, feurs, freelance, puy-de-dôme, 63, Symfony, site professionnel, création site web, cyprien forge, Cyprien Forge">
         <meta name="author" content="Cyprien Forge">
         <meta http-equiv="content-language" content="fr">
         <meta name="geo.region" content="FR-42">
         <meta name="robots" content="index, follow">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://cyprien-forge.fr/">
+
+        <!-- Favicons -->
+        <link rel="icon" href="/favicon.ico" sizes="32x32">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Styles -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="icon" type="image/x-icon" href="/favicon.ico">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-
-        <!-- Apple Touch Icon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-        <!-- Android/Chrome -->
-        <link rel="manifest" href="/site.webmanifest">
-
-        <!-- Safari Pinned Tab (si vous avez ce fichier) -->
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-        <!-- Microsoft -->
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff"><!-- ============================================ -->
-        <!-- FAVICON - Configuration complète pour SEO -->
-        <!-- ============================================ -->
-
-        <!-- Favicon principal (moderne) -->
-        <link rel="icon" type="image/svg+xml" href="{{ asset('logo.svg') }}">
-
-        <!-- Fallback PNG pour anciens navigateurs -->
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
-
-        <!-- Favicon ICO (OBLIGATOIRE pour Google) -->
-        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
-
-        <!-- Apple Touch Icon (iPhone/iPad) -->
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
-
-        <!-- Android Chrome -->
-        <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('android-chrome-192x192.png') }}">
-        <link rel="icon" type="image/png" sizes="512x512" href="{{ asset('android-chrome-512x512.png') }}">
-
-        <!-- Microsoft Tiles -->
-        <meta name="msapplication-TileColor" content="#2563eb">
-        <meta name="msapplication-config" content="{{ asset('browserconfig.xml') }}">
-	    <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
-	    <link rel="canonical" href="https://cyprien-forge.fr/">
+        <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
+        <script src="https://cdn.tailwindcss.com"></script>
 
         <!-- OpenGraph -->
         <meta property="og:type" content="website">
@@ -70,14 +52,13 @@
         <meta property="og:locale" content="fr_FR">
         <meta property="og:image" content="https://cyprien-forge.fr/images/myPhoto.jpg">
 
-        <!-- Twitter -->
-        <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:title" content="Développeur Web à Roanne, Feurs, Montbrison – Cyprien Forge">
-        <meta property="twitter:image" content="https://cyprien-forge.fr/images/myPhoto.jpg">
-        <meta property="twitter:description" content="Cyprien Forge - Développeur Web Full-Stack spécialisé Symfony, Angular, PHP. Disponible Loire (42) et Puy-de-Dôme (63) : Roanne, Feurs, Montbrison, Clermont-Ferrand. Créez votre site web professionnel.">
-        {% block stylesheets %}
-        {% endblock %}
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Développeur Web à Roanne, Feurs, Montbrison – Cyprien Forge">
+        <meta name="twitter:description" content="Cyprien Forge - Développeur Web Full-Stack spécialisé Symfony, Angular, PHP. Disponible Loire (42) et Puy-de-Dôme (63) : Roanne, Feurs, Montbrison, Clermont-Ferrand. Créez votre site web professionnel.">
+        <meta name="twitter:image" content="https://cyprien-forge.fr/images/myPhoto.jpg">
 
+        {% block stylesheets %}{% endblock %}
         {% block javascripts %}
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
@@ -87,30 +68,46 @@
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKPZ5C8D"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
+
         {% block body %}{% endblock %}
+
+        <!-- Schema.org Structured Data -->
         <script type="application/ld+json">
-            {
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "name": "Cyprien Forge - Développeur Web Full-Stack",
-              "jobTitle": "Développeur Web Full-Stack",
-              "url": "https://cyprien-forge.fr",
-               "sameAs": [
-                 "https://www.linkedin.com/in/cyprien-forge",
-                 "https://github.com/CyprienForge"
-               ]
-              "image": "https://cyprien-forge.fr/images/myPhoto.jpg",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Roanne, Feurs, Montbrison",
-                "addressRegion": "Loire, Puy-de-Dôme",
-                "addressCountry": "FR"
-              },
-              "email": "cyprien.forge.pro@gmail.com",
-              "telephone": "+33766079834",
-              "knowsAbout": ["Cyprien Forge", "Site web", "Application Web", "création site web", "Roanne", "Montbrison", "Feurs", "Symfony", "Angular", "PHP", "JavaScript", "Développement Web"],
-              "description": "Cyprien Forge - Développeur Web Full-Stack spécialisé Symfony, Angular, PHP. Je crée des applications ou sites web modernes et intuitifs. Disponible Loire (42) et Puy-de-Dôme (63) : Roanne, Feurs, Montbrison, Clermont-Ferrand. Créez votre site web professionnel."
-            }
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Cyprien Forge - Développeur Web Full-Stack",
+          "jobTitle": "Développeur Web Full-Stack",
+          "url": "https://cyprien-forge.fr",
+          "sameAs": [
+            "https://www.linkedin.com/in/cyprien-forge",
+            "https://github.com/CyprienForge"
+          ],
+          "image": "https://cyprien-forge.fr/images/myPhoto.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Roanne, Feurs, Montbrison",
+            "addressRegion": "Loire, Puy-de-Dôme",
+            "addressCountry": "FR"
+          },
+          "email": "cyprien.forge.pro@gmail.com",
+          "telephone": "+33766079834",
+          "knowsAbout": [
+            "Cyprien Forge",
+            "Site web",
+            "Application Web",
+            "création site web",
+            "Roanne",
+            "Montbrison",
+            "Feurs",
+            "Symfony",
+            "Angular",
+            "PHP",
+            "JavaScript",
+            "Développement Web"
+          ],
+          "description": "Cyprien Forge - Développeur Web Full-Stack spécialisé Symfony, Angular, PHP. Je crée des applications ou sites web modernes et intuitifs. Disponible Loire (42) et Puy-de-Dôme (63) : Roanne, Feurs, Montbrison, Clermont-Ferrand. Créez votre site web professionnel."
+        }
         </script>
 
         <script src="{{ asset('script.js') }}"></script>
