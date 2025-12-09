@@ -26,10 +26,10 @@ final class HomeController extends AbstractController
                 $data['email'],
                 $data['subject'],
                 $data['message']
-            ));
+	   ));
 
             $this->addFlash('success', 'Votre message a bien été envoyé !');
-            return $this->redirectToRoute('app_home', ['submitted' => 1]);
+            return $this->redirectToRoute('app_home');
         }
 
         return $this->render('home/index.html.twig', [
