@@ -20,7 +20,45 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+        <!-- Apple Touch Icon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+        <!-- Android/Chrome -->
+        <link rel="manifest" href="/site.webmanifest">
+
+        <!-- Safari Pinned Tab (si vous avez ce fichier) -->
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+        <!-- Microsoft -->
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff"><!-- ============================================ -->
+        <!-- FAVICON - Configuration complète pour SEO -->
+        <!-- ============================================ -->
+
+        <!-- Favicon principal (moderne) -->
         <link rel="icon" type="image/svg+xml" href="{{ asset('logo.svg') }}">
+
+        <!-- Fallback PNG pour anciens navigateurs -->
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
+
+        <!-- Favicon ICO (OBLIGATOIRE pour Google) -->
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+
+        <!-- Apple Touch Icon (iPhone/iPad) -->
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
+
+        <!-- Android Chrome -->
+        <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('android-chrome-192x192.png') }}">
+        <link rel="icon" type="image/png" sizes="512x512" href="{{ asset('android-chrome-512x512.png') }}">
+
+        <!-- Microsoft Tiles -->
+        <meta name="msapplication-TileColor" content="#2563eb">
+        <meta name="msapplication-config" content="{{ asset('browserconfig.xml') }}">
 	    <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
 	    <link rel="canonical" href="https://cyprien-forge.fr/">
 
